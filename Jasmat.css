@@ -1,0 +1,1029 @@
+/* Comienzo de Configuraciones generales */
+
+* {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1c1e21;
+}
+
+#marco::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+  background-color: transparent;
+}
+
+#marco::-webkit-scrollbar-thumb {
+  background-color: #414141;
+  border-radius: 5px;
+}
+
+#marco {
+  width: 100%;
+  min-height: 400px;
+  height: 100%;
+  overflow: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+#contenedor {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header,
+#Primer-panel,
+#Segundo-Panel,
+#FormasDePago,
+#Contacto,
+#Servicios,
+#Experiencia {
+  width: 100%;
+  height: 100vh;
+  min-height: 400px;
+  max-width: 1440px;
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Final de Configuraciones generales */
+
+/* Comienzo de introducción */
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#letrasH {
+  width: 250px;
+  height: 250px;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 100%;
+  user-select: none;
+  animation: animacionLetrasH 0.7s 1.5s 1 linear forwards;
+  z-index: 50;
+}
+
+
+#letrasH::hover{
+  animation: animacionLetrasH 1s  1 linear forwards;
+}
+
+
+@keyframes animacionLetrasH {
+  from {
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+#backHeader,
+#backHeader2 {
+  width: 290px;
+  height: 290px;
+  background-color: #4c8837;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 100%;
+  z-index: 30;
+  animation: animacionHeader 0.6s 1s 1 linear alternate forwards;
+}
+#backHeader2 {
+  background-color: #2b4da6;
+  width: 320px;
+  height: 320px;
+  z-index: 20;
+  animation: animacionHeader 0.6s 0.4s 1 linear alternate forwards;
+}
+
+@keyframes animacionHeader {
+  0% {}
+  100% { transform: scale(6)}
+}
+
+#J,
+#T {
+  font-family: 'Libre Franklin', sans-serif;
+  margin: auto;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  font-weight: 400;
+  font-size: 200px;
+  color: #4c8837;
+  text-align: center;
+  z-index: 2;
+  line-height: 77%;
+  opacity: 0;
+  animation: opacidadLetras 0.5s 2.5s 1 linear forwards;
+}
+
+#T {
+  left: 55px;
+  color: #2b4da6;
+  z-index: 3;
+}
+
+@keyframes opacidadLetras {
+  from {
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* -------------------------------Final de HEader ----------------------------*/
+
+/* -------------------- ComienzoEstilos del primer y segundo panel------------ */
+#Primer-panel,
+#Segundo-Panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+#Primer-panel::before,
+#Segundo-Panel::before {
+  content: "";
+  background-image: linear-gradient(#0000006b, #0000008a),
+    url("./Jasmat-Imgs/img-9.jpg");
+  background-size: cover;
+  background-position: left;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#Segundo-Panel::before {
+  background-image: linear-gradient(#0000006b, #0000008a),
+    url("./Jasmat-Imgs/Img-1.jpg");
+  background-position: center;
+}
+
+.marcoPP-PS {
+  width: 80%;
+  height: max-content;
+  position: relative;
+  border-left: solid 5px #f1f1f1;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+#PP-p,
+#SP-p {
+  height: auto;
+  width: 90%;
+  padding: 5%;
+  margin: 0;
+  font-weight: 300;
+  font-size: 25px;
+  background-color: #1f1f1fb0;
+  backdrop-filter: blur(5px);
+  z-index: 20;
+  line-height: 1.5em;
+  font-family: "Roboto", sans-serif;
+}
+
+/* ------------A partir de aquí comienzan los estilos de SVGs ---------------*/
+
+#elementoPPT1,
+#elementoSPT1 {
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+  background-color: #2b4da6;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#elementoSPT1 {
+  background-color: #4c8837;
+}
+
+#elementoPPT2,
+#elementoSPT2 {
+  clip-path: polygon(0 82%, 100% 10%, 100% 100%, 0 100%);
+  background-color: #4c8837;
+  width: 70%;
+  height: 70px;
+  position: absolute;
+  top: 8px;
+  right: 0;
+}
+
+#elementoSPT2 {
+  background-color: #2b4da6;
+}
+
+#elementoPPB1,
+#elementoSPB1 {
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 100%);
+  background-color: #4c8837;
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotateY(180deg) rotateX(180deg);
+}
+#elementoSPB1 {
+  background-color: #2b4da6;
+}
+
+#elementoPPB2,
+#elementoSPB2 {
+  clip-path: polygon(0 82%, 100% 10%, 100% 100%, 0 100%);
+  background-color: #2b4da6;
+  width: 80%;
+  height: 70px;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  transform: rotateY(180deg) rotateX(180deg);
+}
+
+#elementoSPB2 {
+  background-color: #4c8837;
+}
+
+/* -------------------- Final Estilos del primer y segundo panel------------ */
+/* ----------------------Comienzo de  Panel de servicios ------------------- */
+
+#Servicios {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8vh;
+  height: 92.1vh;
+  transition: 0.1s;
+}
+
+#S-titulo {
+  height: max-content;
+  width: max-content;
+  margin: auto;
+  position: absolute;
+  top: 1.5vh;
+  z-index: -1;
+  user-select: none;
+  transition: 0.2s;
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+}
+
+#e-v,
+#l-i,
+#l-e {
+  width: 100%;
+  height: 30%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: pointer;
+  gap: 0vh;
+}
+
+#e-v::before,
+#l-i::before,
+#l-e::before {
+  content: "";
+  position: absolute;
+  background-image: linear-gradient(#0000006b, #000000c0),
+    url(./Jasmat-Imgs/img-7.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#l-i::before {
+  background-image: linear-gradient(#0000006b, #000000c0),
+    url(./Jasmat-Imgs/img-8.jpg);
+}
+
+#l-e::before {
+  background-image: linear-gradient(#0000006b, #000000c0),
+    url(./Jasmat-Imgs/img-3.jpg);
+}
+
+#ev-titulo,
+#li-titulo,
+#le-titulo {
+  width: max-content;
+  height: max-content;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 1.1em;
+  letter-spacing: 0.1em;
+  position: relative;
+  align-self: center;
+}
+
+#contenido1,
+#contenido2,
+#contenido3 {
+  width: 90%;
+  max-width: 840px;
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto 0 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5vh;
+}
+
+#ev-c-p,
+#li-c-p,
+#le-c-p {
+  width: 100%;
+  height: max-content;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-size: 25px;
+  font-weight: 300;
+  position: relative;
+  margin: 0;
+}
+
+#ev-c-ul,
+#li-c-ul,
+#le-c-ul {
+  margin: 0;
+  padding: 0 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2vh;
+}
+
+#ev-c-ul li,
+#li-c-ul li,
+#le-c-ul li {
+  font-weight: 300;
+  font-size: 25px;
+  font-family: "Roboto", sans-serif;
+  list-style-type: disc;
+}
+
+/* Fin de Servicios */
+
+/* -----------------COMIENZO DEL PANEL DE FORMAS DE PAGO-------------------- */
+
+#FormasDePago {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+#FormasDePago::before {
+  content: "";
+  background-image: linear-gradient(#00000059, #00000059),
+    url("./Jasmat-Imgs/img-6.jpg");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+#div-formPag {
+  width: 100vw;
+  height: auto;
+  max-width: 824px;
+  position: relative;
+}
+
+#fdp-titulo {
+  font-size: 35px;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+}
+
+#fdp-p {
+  width: 90%;
+  margin: 0 5%;
+  font-size: 23px;
+  font-weight: 300;
+  line-height: 36px;
+  font-family: "Roboto", sans-serif;
+}
+
+#fdp-ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-around;
+  gap: 3vh;
+}
+
+#fdp-ul li {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#fdp-ul li p {
+  font-size: 23px;
+  font-weight: 300;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.bi-bank,
+.bi-wallet,
+.bi-shop,
+.bi-phone,
+.bi-cash {
+  font-size: 40px;
+  width: min-content;
+  height: min-content;
+}
+
+/* ------------------FINAL DEL PANEL DE FORMAS DE PAGO---------------------- */
+
+/*   Comienzo de contacto     */
+
+#Contacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Contacto::before {
+  content: "";
+  background-image: linear-gradient(#0000006b, #0000006b),
+    url("./Jasmat-Imgs/img-2.jpg");
+  background-size: cover;
+  object-position: center;
+  background-color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+}
+
+/* From uiverse.io */
+
+#box-contacto {
+  width: 90%;
+  height: 90%;
+  z-index: 20;
+  background-color: #0b8681;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  transform: translateX(-100vw);
+  opacity: 0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px 5px  #0000001c;
+}
+
+#Panel-mensaje {
+  width: 100%;
+  height: 40%;
+  background-color: #164c85;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+#PM-p {
+  width: auto;
+  height: auto;
+  margin: 0 10%;
+  color: white;
+  font-size: 1.6em;
+  text-align: left;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+.span-form {
+  width: 100%;
+  height: 40%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+.span-form2 {
+  width: 100%;
+  height: 60%;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+#img-form {
+  width: 90%;
+  margin: 0 5%;
+  height: 100%;
+  object-fit: scale-down;
+}
+
+#Formulario {
+  width: 100%;
+  margin: 0 ;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  order: 2;
+  gap: 10%;
+}
+
+
+/* From uiverse.io by @alexruix */
+#nombre,
+#mensaje,
+#email {
+  min-width: 210px;
+  max-width: 300px;
+  width: 70%;
+  line-height: 28px;
+  border: 2px solid transparent;
+  border-bottom-color: #000;
+  padding: 0.2rem 0;
+  outline: none;
+  background-color: transparent;
+  color: #000;
+  transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  resize: none;
+}
+
+#nombre:focus,
+#mensaje:focus,
+#email:focus,
+#nombre:hover,
+#mensaje:hover,
+#email:hover {
+  outline: none;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+  border-color: white;
+}
+
+#nombre::placeholder,
+#mensaje::placeholder,
+#email::placeholder {
+  color: #000;
+  user-select: none;
+  font-size: 18px;
+}
+
+#nombre:focus::placeholder,
+#mensaje:focus::placeholder,
+#email:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+
+#mensaje {
+  resize: none;
+  height: 60px;
+  margin: 0;
+  overflow: visible;
+}
+
+/* From uiverse.io */
+#btn-form,
+#btn-contacto {
+  padding: 10px 30px;
+  font-size: 15px;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px #0000001a;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+#btn-contacto:hover,
+#btn-form:hover {
+  background-color: #59c4f0;
+  box-shadow: 0px 15px 20px #4495b4;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+/* From uiverse.io by @AqFox */
+.spinner {
+  opacity: 0;
+  margin: -30px 0 -40px 0 ;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  border: 4px solid #0000;
+  border-radius: 50%;
+  border-right-color: #004dff;
+  animation: spinner-a4dj62 1s infinite linear;
+ }
+ 
+ .spinner::before,
+ .spinner::after {
+  content: "";
+  grid-area: 1/1;
+  margin: 2px;
+  border: inherit;
+  border-radius: 50%;
+  animation: spinner-a4dj62 2s infinite;
+ }
+ 
+ .spinner::after {
+  margin: 8px;
+  animation-duration: 3s;
+ }
+ 
+ @keyframes spinner-a4dj62 {
+  100% {
+   transform: rotate(1turn);
+  }
+ }
+
+/*   fin de contacto     */
+
+/* Comienzo de experiencia */
+
+#Experiencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Experiencia::before {
+  content: "";
+  background-image: linear-gradient(#0000005b, #0000005b),
+    url("./Jasmat-Imgs/img-4.jpg");
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+#marcoExp {
+  width: 90%;
+  max-width: 700px;
+  height: max-content;
+  background: #46724580;
+  border-left: solid 5px #ebff03;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+#EX-p {
+  margin: 0;
+  width: calc(100% - 40px);
+  height: max-content;
+  text-align: left;
+  font-weight: 300;
+  background-color: #1e1e1e8d;
+  padding: 30px 20px;
+  z-index: 20;
+  position: relative;
+  font-size: 20px;
+  line-height: 1.5em;
+  font-family: "Roboto", sans-serif;
+}
+
+/*   Fin de Experiencia    */
+/*   Comienzo de footer     */
+
+footer {
+  padding-top: 10vh;
+  width: 100% ;
+  max-width: 1440px;
+  height: 90vh;
+  min-height: 400px;
+  background-color: black;
+  scroll-snap-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8vh;
+}
+
+.enlaces,
+.redes {
+  width: 70%;
+  padding: 2% 1%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3vh;
+}
+
+#h3-en,
+#h3-redes {
+  font-size: 35px;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+#correo,
+#numero {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.enlaces a:hover {
+  color: greenyellow;
+}
+.enlaces a:hover > i {
+  color: greenyellow;
+}
+
+#facebook,
+#linkedin,
+#instagram {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.redes a:hover {
+  color: greenyellow;
+}
+.redes a:hover > i {
+  color: greenyellow;
+}
+
+#gracias {
+  width: 70%;
+  height: min-content;
+  justify-content: space-around;
+  font-weight: 300;
+  font-size: 20px;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/*   fin de footer     */
+
+
+@media only screen and (min-width: 819px){
+  /* COMIENZO DE PANEL DE CONTACTO */
+
+
+  #PP-p,
+  #SP-p {
+    font-size: 28px;
+    line-height: 1.5em;
+  }
+  
+  #S-titulo {
+    font-size: 30px;
+  }
+
+  #ev-titulo,
+  #li-titulo,
+  #le-titulo {
+    font-size: 50px;
+    line-height: 1.1em;
+  }
+  
+  #ev-c-p,
+  #li-c-p,
+  #le-c-p {
+    font-size: 30px;
+  }
+
+  #ev-c-ul li,
+  #li-c-ul li,
+  #le-c-ul li{
+    font-size: 30px;
+
+  }
+
+  #fdp-titulo {
+    font-size: 45px;
+  }
+  
+  #fdp-p {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  
+  
+  #fdp-ul li p {
+    font-size: 30px;
+  }
+  
+  .bi-bank,
+  .bi-wallet,
+  .bi-shop,
+  .bi-phone,
+  .bi-cash {
+    font-size: 40px;
+  }
+  
+
+  
+  #PM-p {
+    font-size: 1.5em;
+  }
+
+
+#box-contacto{
+  flex-direction: row;
+}
+
+
+
+
+#Formulario{
+  width: 50%;
+  height: 100%;
+}
+
+
+#Panel-mensaje{
+  width: 40%;
+  padding: 0px 5%;
+  height: 100%;
+  
+}
+  
+
+
+
+.span-form{
+  width: 50%;
+  height: 100%;
+}
+
+.span-form2 {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+
+  #nombre,
+  #mensaje,
+  #email {
+    line-height: 28px;
+    font-size: 25px;
+
+  }
+  
+  #nombre::placeholder,
+  #mensaje::placeholder,
+  #email::placeholder {
+    font-size: 25px;
+  }
+  
+  
+  /* From uiverse.io */
+  #btn-form,
+  #btn-contacto {
+    font-size: 20px;
+  }
+  
+
+#PM-p {
+
+  /* font-weight: 400; */
+  font-size: 3em;
+}
+
+
+
+  #EX-p {
+    font-size: 28px;
+    line-height: 1.5em;
+  }
+  
+
+
+  footer {
+    height: 40vh;
+    min-height: 300px;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+
+  .redes,.enlaces,#gracias{
+    width: 20%;
+  }
+
+
+
+  #h3-en,
+  #h3-redes {
+    font-size: 30px;
+    width: max-content;
+  }
+  
+#correo,
+#numero {
+  font-size: 20px;
+}
+
+
+.redes,.enlaces{
+  height: 80%;
+  
+}
+
+#facebook,
+#linkedin,
+#instagram {
+  font-size: 20px;
+}
+
+
+  #gracias {
+    font-size: 20px;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
