@@ -100,9 +100,9 @@
               <button id="btn-contacto">Contáctenos</button>
               <div id="box-contacto">
                   <form  id="Formulario" >
-                      <input pattern="^[a-zA-Z]{3,16}$" placeholder="Nombre" required type="text" maxlength="16"  id="nombre" name="nombre"/>
-                      <input placeholder="Correo electrónico" pattern="^[\w{5,34}$" required type="email" maxlength="34" id="email" name="email"/>
-                      <textarea placeholder="Mensaje" required id="mensaje" maxlength="300" name="mensaje"></textarea>
+                      <input autocomplete="off" pattern="^[a-zA-Z]{3,16}$" placeholder="Nombre" required type="text" maxlength="16"  id="nombre" name="nombre"/>
+                      <input autocomplete="off" placeholder="Correo electrónico" pattern="^[\w{5,34}]$" required type="email" maxlength="34" id="email" name="email"/>
+                      <textarea autocomplete="off" placeholder="Mensaje" required id="mensaje" maxlength="300" name="mensaje"></textarea>
                       <button id="btn-form" type="submit" >ENVIAR</button>
                       <div class="spinner"></div>
                   </form>
