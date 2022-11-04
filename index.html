@@ -76,7 +76,7 @@
                         <p id="le-c-p">En este sector de limpiezas especiales tenemos servicios de limpieza dedicados a espacios que no suelen considerar, entre esos servicios tenemos:</p>
                         <ul id="le-c-ul">
                             <li>Limpieza de Finales de Obra</li>
-                            <li>Limpieza de ductos de aire</li>
+                            <li>Limpieza de pozos de aire</li>
                             <li>Limpieza de Graseras</li>
                             <li>Limpieza de Puestos de Feria</li>
                             <li>Limpieza de Fachadas</li>
@@ -100,11 +100,38 @@
               <button id="btn-contacto">Contáctenos</button>
               <div id="box-contacto">
                   <form  id="Formulario" >
-                      <input autocomplete="off" pattern="^[a-zA-Z]{3,16}$" placeholder="Nombre" required type="text" maxlength="16"  id="nombre" name="nombre"/>
-                      <input autocomplete="off" placeholder="Correo electrónico" pattern="^[\w{5,34}]$" required type="email" maxlength="34" id="email" name="email"/>
-                      <textarea autocomplete="off" placeholder="Mensaje" required id="mensaje" maxlength="300" name="mensaje"></textarea>
+                      <input 
+                      autocomplete="off" 
+                      pattern="^[a-zA-Z]{3,16}$"
+                       placeholder="Nombre" required 
+                       type="text" 
+                       maxlength="16" 
+                        id="nombre" 
+                        name="nombre"
+                        />
+                      <input
+                       autocomplete="off" 
+                       placeholder="Correo electrónico" 
+                       pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" 
+                       required 
+                       type="email" 
+                       maxlength="34" 
+                       id="email" 
+                       name="email"
+                       />
+                      <textarea 
+                      autocomplete="off" 
+                      placeholder="Mensaje"
+                       required id="mensaje" 
+                       maxlength="300" 
+                       name="mensaje"
+                       ></textarea>
                       <button id="btn-form" type="submit" >ENVIAR</button>
-                      <div class="spinner"></div>
+                      <div class="spinner">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
                   </form>
                   <section id="Panel-mensaje"><p id="PM-p"></p></section>
                   <span id="SpanImg" class="span-form"><img  alt="" src="./Jasmat-Imgs/logo-completo.png" id="img-form"></span>

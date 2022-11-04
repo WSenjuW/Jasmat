@@ -512,7 +512,6 @@ body {
   z-index: -1;
 }
 
-/* From uiverse.io */
 
 #box-contacto {
   width: 90%;
@@ -675,39 +674,50 @@ body {
   transform: translateY(-7px);
 }
 
-/* From uiverse.io by @AqFox */
+
 .spinner {
-  opacity: 0;
-  margin: -30px 0 -40px 0 ;
-  width: 40px;
+  --clr: #8f1515;
+  --gap: 6px;
+    /* gap between each circle */
+  width: 100px;
   height: 40px;
-  display: grid;
-  border: 4px solid #0000;
-  border-radius: 50%;
-  border-right-color: #004dff;
-  animation: spinner-a4dj62 1s infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap);
+  opacity: 0;
  }
  
- .spinner::before,
- .spinner::after {
-  content: "";
-  grid-area: 1/1;
-  margin: 2px;
-  border: inherit;
-  border-radius: 50%;
-  animation: spinner-a4dj62 2s infinite;
+ .spinner span {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: var(--clr);
+  opacity: 0;
  }
  
- .spinner::after {
-  margin: 8px;
-  animation-duration: 3s;
+ .spinner span:nth-child(1) {
+  animation: fade 1s ease-in-out infinite;
  }
  
- @keyframes spinner-a4dj62 {
-  100% {
-   transform: rotate(1turn);
+ .spinner span:nth-child(2) {
+  animation: fade 1s ease-in-out 0.33s infinite;
+ }
+ 
+ .spinner span:nth-child(3) {
+  animation: fade 1s ease-in-out 0.66s infinite;
+ }
+ 
+ @keyframes fade {
+  0%, 100% {
+   opacity: 1;
+  }
+ 
+  60% {
+   opacity: 0;
   }
  }
+ 
 
 /*   fin de contacto     */
 

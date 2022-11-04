@@ -128,25 +128,8 @@ nombre.addEventListener("input", validaciónNombre);
 function validaciónEmail(e) {
   //Esta función hace una validación de contenido , dando las alertas de lo que falta para completar los campos
   let mensaje = "";
-  if (/^[\w{6,16}]\@[\w{3,12}]\.com$/.test(this.value) === false) {
-    if (/.+/.test(this.value) != true)
-      mensaje = "Ingrese su correo electrónico por favor";
-
-    else if (/^[\w{1,6}]\@[\w{1,12}]\.com$/.test(this.value) === true || /^[\w{6,30}]\@([\w{1,12}])\.com$/.test(this.value) === true)
-      mensaje = "El correo debe contener entre 3 y 16 caracteres";
-
-    else if (/([\W]+[^@] )/.test(this.value) === true)
-      mensaje = "Este campo solamente admite los siguientes caracteres a-z,0-9,_";
-
-    else if (/\@/.test(this.value) != true)
-      mensaje = "El email debe contener una @";
-
-    else if (/\@\.com$/.test(this.value) === true)
-      mensaje = "Agregue el dominio correspondientes(Hotmail, Gmail, Outlook, etc...)";
-
-    else if (/\.com$/.test(this.value) != true)
-      mensaje = 'El email debe contener el termino ".com" al final';
-    // mostrar/resetear mensaje (el mensaje se resetea poniendolo a "")
+  if (/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(this.value) === false) {
+    mensaje = "Su correo no es correcto"
   }
   this.setCustomValidity(mensaje);
 }
@@ -154,7 +137,6 @@ function validaciónEmail(e) {
 let email = document.getElementById("email");
 // cuando se cambie el valor del campo o sea incorrecto, mostrar/resetear mensaje
 email.addEventListener("invalid", validaciónEmail);
-email.addEventListener("input", validaciónEmail);
 
 
 function validaMensaje(e) {
